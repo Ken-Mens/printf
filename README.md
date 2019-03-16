@@ -1,4 +1,4 @@
-# 0x10. C - PRINTF
+# 0x10. C - printf
 
 This repository contains the files to create the printf function.
 
