@@ -10,8 +10,10 @@
 typedef struct types
 {
 	char *c;
-	int (*f)(va_list, list);
+	int (*f)(va_list list);
 } types_t;
 int _putchar(char c);
 int _printf(const char *format, ...);
+int p_char(va_list list);
+int p_str(va_list list);
 #endif

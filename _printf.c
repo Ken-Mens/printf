@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 	};
 
 	va_list list;
-	int x;
+	int x = 0;
 	int y;
 	int counter = 0;
 
@@ -22,23 +22,23 @@ int _printf(const char *format, ...)
 
 	if (!format[x])
 		return (0);
-	for (x = 0; format[x]; x++)
+	for (; format[x]; x++)
 	{
-		if (format[x] == %)
+		if (format[x] == '%')
 		{
-			for (y = 0; check[y].c, y++)
+			for (y = 0; check[y].c; y++)
 			{
 				if (*check[y].c == format[x + 1])
 				{
 					counter += check[y].f(list);
-					/* might need x++ here */
-				}
-				else
-				{
-					_putchar(format[x]);
-					counter++;
+					x++;
 				}
 			}
+		}
+		else
+		{
+			_putchar(format[x]);
+			counter++;
 		}
 	}
 	va_end(list);
