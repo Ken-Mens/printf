@@ -2,6 +2,7 @@
 #define _HOLBERTON_H_
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdlib.h>
 /**
  * struct types - parameters to check
  * @c: type
