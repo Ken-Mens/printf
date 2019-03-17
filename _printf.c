@@ -10,6 +10,8 @@ int _printf(const char *format, ...)
 
 		{"c", p_char},
 		{"s", p_str},
+		{"d", p_int},
+		{"i", p_int},
 		{NULL, NULL},
 	};
 
