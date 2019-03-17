@@ -17,4 +17,7 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int p_char(va_list list);
 int p_str(va_list list);
+int p_int(va_list list);
+char *convert(unsigned int num, int base);
 #endif
+
