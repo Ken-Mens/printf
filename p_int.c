@@ -1,14 +1,37 @@
 #include "holberton.h"
 int p_int(va_list list)
 {
-	int x, i;
-	char *str;
+	char last_digit;
+	int reversed;
+	int n = va_arg(list, int);
+	int count = 0;
 
-	x = va_arg(list, int);
-	str = convert(x, 10);
-	for (i = 0; str[i]; i++);
+	if (n < 0)
 	{
-		_putchar(str[i]);
+		_putchar('-');
+		count++;
+		last_digit = (char)('0' - (n % 10));
+		n /= -10;
 	}
-	return (i);
-}  
+	else
+	{
+		last_digit = (char)((n % 10) + '0');
+		n /= 10;
+	}
+	reversed = 0;
+	while (n > 0)
+	{
+		reversed = reversed * 10 + (n % 10);
+		n /= 10;
+	}
+	while (reversed > 0)
+	{
+		char c = (char)((reversed % 10) + '0');
+		_putchar(c);
+		count++;
+		reversed /= 10;
+	}
+	_putchar(last_digit);
+	count++;
+	return (count);
+}
