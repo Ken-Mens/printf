@@ -6,8 +6,13 @@
  */
 int p_int(va_list list)
 {
-	int n = va_arg(list, int), counter = 0, temp, c = 1, spaces = 1, refill = 1;
+	int n = va_arg(list, int);
 	int orig = n;
+	int counter = 0;
+	int temp;
+	int c = 1;
+	int spaces = 1;
+	int refill = 1;
 
 	if (n < 0)
 	{
@@ -16,9 +21,9 @@ int p_int(va_list list)
 		counter++;
 	}
 	for (temp = orig; temp >= 10; temp /= 10)
-	spaces++;
+		spaces++;
 	for (; c < spaces; c++)
-	refill *= 10;
+		refill *= 10;
 	while (refill > 1)
 	{
 		_putchar((orig / refill) % 10 + '0');
