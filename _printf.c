@@ -13,7 +13,7 @@ int _printf(const char *format, ...)
 
 	va_start(list, format);
 	if (format == NULL)
-	return (-1);
+		return (-1);
 	for (; format[x]; x++)
 	{
 		if (format[x] == '%')
@@ -21,18 +21,17 @@ int _printf(const char *format, ...)
 			if (format[x + 1] == '%')
 			{
 				_putchar(format[x]);
-				_putchar(format[x + 1]);
-				counter++;
 				counter++;
 				x++;
 				continue;
 			}
+			if (format[x + 1] == '\0')
+				return (-1);
 			p = type_check(format[x + 1]);
 			if (p == 0)
 			{
-				_putchar (format[x]);
+				_putchar(format[x]);
 				counter++;
-				x++;
 				continue;
 			}
 			counter += (*p)(list);
