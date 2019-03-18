@@ -1,4 +1,9 @@
 #include "holberton.h"
+/**
+ * p_int - prints the int
+ * @list: the argument passed through
+ * Return: the number of ints printed
+ */
 int p_int(va_list list)
 {
 	char last_digit;
@@ -27,6 +32,7 @@ int p_int(va_list list)
 	while (reversed > 0)
 	{
 		char c = (char)((reversed % 10) + '0');
+
 		_putchar(c);
 		count++;
 		reversed /= 10;
