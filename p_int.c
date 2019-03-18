@@ -6,38 +6,26 @@
  */
 int p_int(va_list list)
 {
-	char last_digit;
-	int reversed;
-	int n = va_arg(list, int);
-	int count = 0;
+	int n = va_arg(list, int), counter = 0 ,temp, c = 1, spaces = 1, refill = 1;
+	int orig = n;
 
-	if (n < 0)
-	{
+	if(n < 0)
+	{	
+		orig = (orig *-1);
 		_putchar('-');
-		count++;
-		last_digit = (char)('0' - (n % 10));
-		n /= -10;
+		counter++;
 	}
-	else
+	for (temp = orig; temp >= 10; temp /= 10)
+	spaces++;
+	for (; c < spaces; c++)
+	refill *= 10;
+	while (refill > 1)
 	{
-		last_digit = (char)((n % 10) + '0');
-		n /= 10;
+		_putchar((orig/refill) % 10 + '0');
+		refill /= 10
+		counter++;
 	}
-	reversed = 0;
-	while (n > 0)
-	{
-		reversed = reversed * 10 + (n % 10);
-		n /= 10;
-	}
-	while (reversed > 0)
-	{
-		char c = (char)((reversed % 10) + '0');
-
-		_putchar(c);
-		count++;
-		reversed /= 10;
-	}
-	_putchar(last_digit);
-	count++;
-	return (count);
-}
+	_putchar(orig % 10 +'0');
+	counter++;
+	return (counter);
+}  
