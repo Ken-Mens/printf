@@ -8,39 +8,21 @@
 .I int _printf(const char *format, ...);
 .IP
 .SH DESCRIPTION
-
 Function printf will write output to standard output. More specifically used to print the character, string, float, integer, octal and hexadecimal values onto output.
-
 .SH RETURN VALUE
 On success, _printf will return the character printed. So if we set the function _printf ("Hello"), we'll get a return value of 5 after printing 5 characters.
-
 .SH FORMAT SPECIFIERS
-.IP
-.B d,i
-.IP
+.IP d,i
 int and decimal arguments are converted to signed decimal notation.
-.IP
-.B o, u, x, X
-.RS
+.IP o, u, x, X
 converts arguments to unsigned
 octal, unsigned decimal, or unsigned hexadecimal.
-.RE
-
-.B c
-.RS
-character arguments are converted to unsigned
-char and output is resulting character.
-.RE
-
-.B s
-.RS
+.IP c
+character arguments are converted to unsigned char and output is resulting character.
+.IP s
 argument converted to character string and output is resulting string.
-.RE
-
-.B %
-.RS
+.IP %
 percent sign by itself is read a percent sign and pritten as such.
-.RE
 .SH SEE ALSO
 .I printf(3)
 .SH BUGS
