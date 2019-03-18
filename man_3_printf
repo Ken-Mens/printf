@@ -1,30 +1,35 @@
 .TH _printf 3 "17 March 2019" "0.3" "_printf man page"
 .SH NAME
-.B _printf - function that sorts data by different formats and prints into stdout
+.B _printf - function that sorts data by different formats and prints into stdout.
 .SH SYNOPSIS
-.B #include "holberton.h"
+.IP
+.I #include "holberton.h"
+.IP
+.I int _printf(const char *format, ...);
+.IP
 .SH DESCRIPTION
-Function printf will write output to standard output.
-More specifically used to print the character, string, float, integer,
-octal and hexadecimal values onto output.
-.SH RETURN VALUE
-On success, _printf will return the character printed. So if we set the function 
-_printf ("Hello"), we'll get a return value of 5 after printing 5 characters.
-.SH FORMAT SPECIFIERS
-.SS
-.B d,i 
-.RS
-int and decimal arguments are converted to signed decimal notation.
-.RE
 
+Function printf will write output to standard output. More specifically used to print the character, string, float, integer, octal and hexadecimal values onto output.
+
+.SH RETURN VALUE
+On success, _printf will return the character printed. So if we set the function _printf ("Hello"), we'll get a return value of 5 after printing 5 characters.
+
+.SH FORMAT SPECIFIERS
+.IP
+.B d,i
+.IP
+int and decimal arguments are converted to signed decimal notation.
+.IP
 .B o, u, x, X
 .RS
-converts arguments to unsigned octal, unsigned decimal, or unsigned hexadecimal.
+converts arguments to unsigned
+octal, unsigned decimal, or unsigned hexadecimal.
 .RE
 
 .B c
 .RS
-character arguments are converted to unsigned char and output is resulting character.
+character arguments are converted to unsigned
+char and output is resulting character.
 .RE
 
 .B s
@@ -36,7 +41,6 @@ argument converted to character string and output is resulting string.
 .RS
 percent sign by itself is read a percent sign and pritten as such.
 .RE
-
 .SH SEE ALSO
 .I printf(3)
 .SH BUGS
