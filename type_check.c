@@ -1,4 +1,9 @@
 #include "holberton.h"
+/**
+ * type_check - checks for each format cases
+ * @c: pointer to checker.
+ * Return: Nothing.
+ */
 int (*type_check(char c))(va_list list)
 {
 	types_t check[] = {
