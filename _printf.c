@@ -18,6 +18,15 @@ int _printf(const char *format, ...)
 	{
 		if (format[x] == '%')
 		{
+			if (format[x + 1] == '%')
+			{
+				_putchar(format[x]);
+				_putchar(format[x + 1]);
+				counter++;
+				counter++;
+				x++;
+				continue;
+			}
 			p = type_check(format[x + 1]);
 			if (p == 0)
 			{
