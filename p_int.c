@@ -26,7 +26,7 @@ int p_int(va_list list)
 	while(refill > 1)
 	{
 		_putchar((orig/refill) % 10 + '0');
-		refill /= 10
+		refill /= 10;
 		counter++;
 	}
 	_putchar(orig % 10 +'0');
