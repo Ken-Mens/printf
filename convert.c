@@ -1,4 +1,10 @@
 #include "holberton.h"
+/**
+ * convert - converts number to a different base number)
+ * @num: the number to convert
+ * @base: the base to convert @num to
+ * Return: a pointer to the array that stores the new number
+ */
 char *convert(unsigned int num, int base)
 {
 	static const char Representation[] = "0123456789ABCDEF";
