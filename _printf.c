@@ -32,6 +32,7 @@ int _printf(const char *format, ...)
 			{
 				_putchar (format[x]);
 				counter++;
+				x++;
 				continue;
 			}
 			counter += (*p)(list);
