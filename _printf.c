@@ -12,14 +12,19 @@ int _printf(const char *format, ...)
 	int (*p)(va_list list);
 
 	va_start(list, format);
-
-	if (!format[x])
-		return (0);
+	if (format == NULL)
+	return (-1);
 	for (; format[x]; x++)
 	{
 		if (format[x] == '%')
 		{
 			p = type_check(format[x + 1]);
+			if (p == 0)
+			{
+				_putchar (format[x]);
+				counter++;
+				continue;
+			}
 			counter += (*p)(list);
 			x++;
 		}

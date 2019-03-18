@@ -24,5 +24,5 @@ int (*type_check(char c))(va_list list)
 		}
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
