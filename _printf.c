@@ -6,19 +6,10 @@
  */
 int _printf(const char *format, ...)
 {
-	types_t check[] = {
-
-		{"c", p_char},
-		{"s", p_str},
-		{"d", p_int},
-		{"i", p_int},
-		{NULL, NULL},
-	};
-
 	va_list list;
 	int x = 0;
-	int y;
 	int counter = 0;
+	int (*p)(va_list list);
 
 	va_start(list, format);
 
@@ -28,14 +19,9 @@ int _printf(const char *format, ...)
 	{
 		if (format[x] == '%')
 		{
-			for (y = 0; check[y].c; y++)
-			{
-				if (*check[y].c == format[x + 1])
-				{
-					counter += check[y].f(list);
-					x++;
-				}
-			}
+			p = type_check(format[x + 1]);
+			counter += (*p)(list);
+			x++;
 		}
 		else
 		{
