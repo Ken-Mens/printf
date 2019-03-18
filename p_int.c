@@ -6,12 +6,12 @@
  */
 int p_int(va_list list)
 {
-	int n = va_arg(list, int), counter = 0 ,temp, c = 1, spaces = 1, refill = 1;
+	int n = va_arg(list, int), counter = 0, temp, c = 1, spaces = 1, refill = 1;
 	int orig = n;
 
-	if(n < 0)
-	{	
-		orig = (orig *-1);
+	if (n < 0)
+	{
+		orig = (orig * -1);
 		_putchar('-');
 		counter++;
 	}
@@ -21,11 +21,11 @@ int p_int(va_list list)
 	refill *= 10;
 	while (refill > 1)
 	{
-		_putchar((orig/refill) % 10 + '0');
-		refill /= 10
+		_putchar((orig / refill) % 10 + '0');
+		refill /= 10;
 		counter++;
 	}
-	_putchar(orig % 10 +'0');
+	_putchar(orig % 10 + '0');
 	counter++;
 	return (counter);
-}  
+}
