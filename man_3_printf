@@ -10,11 +10,11 @@
 .SH DESCRIPTION
 Function printf will write output to standard output. More specifically used to print the character, string, float, integer, octal and hexadecimal values onto output.
 .SH RETURN VALUE
-On success, _printf will return the character printed. So if we set the function _printf ("Hello"), we'll get a return value of 5 after printing 5 characters.
+On success, _printf will return the character printed. So if we set the function _printf("Hello"), we'll get a return value of 5 after printing 5 characters.
 .SH FORMAT SPECIFIERS
 .IP d,i
 int and decimal arguments are converted to signed decimal notation.
-.IP o, u, x, X
+.IP o,u,x,X
 converts arguments to unsigned
 octal, unsigned decimal, or unsigned hexadecimal.
 .IP c
