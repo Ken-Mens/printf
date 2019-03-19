@@ -13,17 +13,23 @@ int rot13(va_list list)
 	char n[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	int counter = 0;
 
+	if (s == NULL)
+		s = "(ahyy)";
 	for (i = 0; s[i]; i++)
 	{
-		for (j = 0; j < 56; j++)
+		for (j = 0; a[j]; j++)
 		{
 			if (s[i] == a[j])
 			{
-				s[i] = n[j];
+				_putchar(n[j]);
 				counter++;
-				_putchar(s[i]);
 				break;
 			}
+		}
+		if (!a[j])
+		{
+			_putchar(s[i]);
+			counter++;
 		}
 	}
 	return (counter);
