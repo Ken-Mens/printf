@@ -20,5 +20,5 @@ int p_str(va_list list);
 int p_int(va_list list);
 int (*type_check(char c))(va_list list);
 int rot13(va_list list);
-void tusBasicTester();
+int p_reverse(va_list x);
 #endif
