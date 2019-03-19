@@ -1,48 +1,44 @@
+# _printf
 
-# 0x10. C - printf
+___
 
-This repository contains the files to create the printf function.
+This here repository contains a basic recreation of the **printf()** function from the C library. Enjoy your time here...
 
-## General information
+___
 
-* Your code will be compiled this way:
-  * $ gcc -Wall -Werror -Wextra -pedantic *.c
-* As a consequence, be careful not to push any c file containing a main function in the root directory of your project (you could have a test folder containing all your tests files including main functions)
-* Our main files will include your main header file (holberton.h): #include holberton.h
-* You might want to look at the gcc flag -Wno-format when testing with your _printf and the standard printf. 
-* We strongly encourage you to work all together on a set of tests
-* If the task does not specify what to do with an edge case, do the same as printf
+Format specifiers | Function name | Description
+----------------- | ------------- | -----------
+`%c`              | `p_char()`    | Prints a character
+`%s`              | `p_str()`     | Prints a string
+`%i`              | `p_int()`     | Prints an integer
+`%d`              | `p_int()`     | Prints an integer
+`%r`              | `p_reverse()` | Prints a string in reverse
+`%R`              | `p_rot()`     | Prints a string in Rot13 format
 
-## Tasks
+___
 
-**TASK 0**
+### Prototype
 
-Write a function that produces output according to a format.
+`int _printf(const char *format, ...);`
 
-* Prototype: int _printf(const char *format, ...);
-* Returns: the number of characters printed (excluding the null byte used to end output to strings)
-* write output to stdout, the standard output stream
-* format is a character string. The format string is composed of zero or more directives. See man 3 printf for more detail. You need to handle the following conversion specifiers:
-  * c
-  * s
-  * %
-* You don’t have to reproduce the buffer handling of the C library printf function
-* You don’t have to handle the flag characters
-* You don’t have to handle field width
-* You don’t have to handle precision
-* You don’t have to handle the length modifiers
+___
 
-**TASK 1**
+### List of Files
 
-Handle the following conversion specifiers:
+File Name | Description
+--------- | -----------
+`_printf.c` | the main file that prints characters
+`type_check.c` | accesses struct and returns correct function
+`p_char.c` | prints a character
+`p_str.c` | prints a string
+`p_int.c` | prints an integer
+`_putchar.c` | the function used to actuall print a character
+`reverse.c` | reverses a string
+`p_rot13.c` | prints a string in Rot13 format
+`man_3_printf` | the manual for _printf()
 
-       * d
-       * i
-* You don’t have to handle the flag characters
-* You don’t have to handle field width
-* You don’t have to handle precision
-* You don’t have to handle the length modifiers
+___
 
-**TASK 2**
+### Who is responsible for this?
 
-* Create a man page for your function.
+This code was written by [Kenneth Mensah](https://github.com/Ken-Mens) and [Marc Cavigli](https://github.com/MCavigli). We accept cash, checks, and venmo.
