@@ -12,7 +12,7 @@ int (*type_check(char c))(va_list list)
 		{"s", p_str},
 		{"d", p_int},
 		{"i", p_int},
-		{"R", p_rot},
+		{"R", rot13},
 		{NULL, NULL},
 	};
 	int i = 0;
