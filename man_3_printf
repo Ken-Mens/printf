@@ -21,6 +21,10 @@ octal, unsigned decimal, or unsigned hexadecimal.
 character arguments are converted to unsigned char and output is resulting character.
 .IP s
 argument converted to character string and output is resulting string.
+.IP r
+arguments converted to character string and output is reverted string.
+.IP R
+arguments converted to integers and output is rot13'ed string.
 .IP %
 percent sign by itself is read a percent sign and pritten as such.
 .SH SEE ALSO
