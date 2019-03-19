@@ -6,13 +6,14 @@
  */
 int p_int(va_list list)
 {
+
 	int n = va_arg(list, int);
-	int orig = n;
-	int counter = 0;
-	int temp;
-	int c = 1;
-	int spaces = 1;
-	int refill = 1;
+	unsigned int orig = n;
+	unsigned int counter = 0;
+	unsigned int temp;
+	unsigned int c = 1;
+	unsigned int spaces = 1;
+	unsigned int refill = 1;
 
 	if (n < 0)
 	{
