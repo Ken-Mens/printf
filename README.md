@@ -1,6 +1,5 @@
 # _printf
 
-___
 
 This here repository contains a basic recreation of the **printf()** function from the C library. Enjoy your time here...
 
