@@ -27,6 +27,7 @@ ___
 File Name | Description
 --------- | -----------
 `_printf.c` | the main file that prints characters
+`holberton.h` | header file
 `type_check.c` | accesses struct and returns correct function
 `p_char.c` | prints a character
 `p_str.c` | prints a string
@@ -35,6 +36,7 @@ File Name | Description
 `reverse.c` | reverses a string
 `p_rot13.c` | prints a string in Rot13 format
 `man_3_printf` | the manual for _printf()
+`README.md` | the document you're reading...
 
 ___
 
