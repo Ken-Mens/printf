@@ -14,7 +14,7 @@ int p_str(va_list list)
 
 	if (s == NULL)
 	{
-		return (0);
+		s = "(null)";
 	}
 	for (length = 0; s[length]; length++)
 	{
