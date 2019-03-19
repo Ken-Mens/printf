@@ -1,7 +1,7 @@
 # _printf
 
 
-This here repository contains a basic recreation of the **printf()** function from the C library. Enjoy your time here...
+This here repository contains a basic recreation of the **printf()** function from the C library. Our function will handle arguments by different format and print out the appropiate data. Enjoy your time here...
 
 ___
 
