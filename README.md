@@ -7,12 +7,12 @@ ___
 
 Format specifiers | Function name | Description
 ----------------- | ------------- | -----------
-`%c`              | `p_char()`    | Prints a character
-`%s`              | `p_str()`     | Prints a string
-`%i`              | `p_int()`     | Prints an integer
-`%d`              | `p_int()`     | Prints an integer
-`%r`              | `p_reverse()` | Prints a string in reverse
-`%R`              | `p_rot()`     | Prints a string in Rot13 format
+`%c`              | `p_char(char c)`    | Prints a character
+`%s`              | `p_str(va_list list)`     | Prints a string
+`%i`              | `p_int(va_list list)`     | Prints an integer
+`%d`              | `p_int(va_list list)`     | Prints an integer
+`%r`              | `p_reverse(va_list x)` | Prints a string in reverse
+`%R`              | `rot13(va_list list)`     | Prints a string in Rot13 format
 
 ___
 
