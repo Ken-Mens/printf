@@ -39,6 +39,12 @@ File Name | Description
 `README.md` | the document you're reading...
 
 ___
+### How to Compile
+The following is how we compiled our _printf functions to test before
+pushing to Github.
+
+`gcc -Wall -Werror -Wextra -pedantic *.c`
+___
 
 ### Who is responsible for this?
 
